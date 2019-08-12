@@ -1,0 +1,16 @@
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+
+[*.c]
+indent_size = 4
+
+[*.{tex,bib}]
+indent_style = tab
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+indent_size = 8
