@@ -2,7 +2,7 @@
 
 
     Author: Guilherme Inácio Gonçalves <inacio.guilherme@gmail.com>
-    Version: 1.0.0
+    Version: 1.0.1
     Date: 12 August 2019
 
 
