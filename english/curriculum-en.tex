@@ -32,7 +32,7 @@
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
-\ifxetexorluatex
+\ifxetexorluatex%
   % If using xelatex or lualatex:
   \setmainfont{Carlito}
 \else
@@ -80,7 +80,7 @@
 
 %% Make the header extend all the way to the right, if you want.
 \begin{fullwidth}
-\makecvheader
+\makecvheader%
 \end{fullwidth}
 
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
@@ -95,11 +95,18 @@
 \cvevent{Full-stack Developer \& Software Engineer}{O2 Filmes}{Sept 2018 -- Present}{Remote}
 \begin{itemize}
 \item Developed a robust and online text editor and project manager dedicated to screenwriters.
-\item Developed its Back-end using Ruby on Rails and its Front-end using React.
+\item Developed its Back-end using Ruby on Rails and its Front-end using React, operating in a large-scale distributed architecture.
 \item Implemented features such as multi-user tracking, data visualization, notifications, file upload, advanced graphical interface features, etc.
 \end{itemize}
 
-\divider
+\divider%
+
+\cvevent{Data Quality Validator}{CERN -- European Organization for Nuclear Research}{Feb 2021 -- Mar 2021}{Remote}
+\begin{itemize}
+	\item Analysis of data quality and integrity of electronic components in the Tile Calorimeter, the hadron calorimeter covering the central region of the ATLAS experiment at the Large Hadron Collider.
+\end{itemize}
+
+\divider%
 
 \cvevent{Scientific Researcher \& Software Engineer}{CERN -- European Organization for Nuclear Research}{Mar 2019 -- Mar 2020}{Geneva, Switzerland}
 \begin{itemize}
@@ -108,7 +115,7 @@
 	\item Created a pulse generator used to simulate electronic readouts for data processing and physics analysis.
 \end{itemize}
 
-\divider
+\divider%
 
 \cvevent{Full-stack Developer \& Software Engineer}{DataHex Computer Technology}{May 2016 -- Jun 2018}{Nova Friburgo, Brazil}
 \begin{itemize}
@@ -119,18 +126,18 @@
 \item Developed an industry-standard authentication system implementing the OAuth 2.0 and OpenID Connect protocols.
 \end{itemize}
 
-\divider
+\clearpage
 
+\cvsection[page2sidebar-en]{Experience}
 \cvevent{Full-stack Developer \& Mobile Developer}{Vista Group Network}{Jun 2014 -- Apr 2016}{Nova Friburgo, Brazil}
 \begin{itemize}
 \item Developed a cloud-managed parking software using Android devices for ticketing and infringement monitoring.  
 \item Developed an iOS and Android application for parking tickets purchase using Ionic and VB-Net.
-\item Created software to detect free parking spaces using image processing from surveillance cameras. The tool was developed using Python and Open-CV.
+\item Created software to detect free parking spaces using image processing from surveillance cameras. The tool was developed using Python and Open-CV\@.
 \end{itemize}
 
-\clearpage
 
-\cvsection[page2sidebar-en]{Publications}
+\cvsection{Publications}
 
 \nocite{*}
 
@@ -140,7 +147,7 @@
 
 \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
 
-\divider
+\divider%
 
 \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
 % 
