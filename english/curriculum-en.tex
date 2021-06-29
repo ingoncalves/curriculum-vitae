@@ -45,7 +45,7 @@
 % Change the colours if you want to
 \definecolor{StPatricksBlue}{HTML}{1F3D77}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightGrey}{HTML}{333333}
 \colorlet{heading}{StPatricksBlue}
 \colorlet{accent}{StPatricksBlue}
 \colorlet{emphasis}{SlateGrey}
@@ -61,19 +61,19 @@
 
 \begin{document}
 \name{Guilherme Gonçalves}
-\tagline{Computer Engineer}
+\tagline{Full-Stack Engineer}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
 \photo{2.5cm}{profile}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-	\printinfo{\faInfo}{07 June 1994, Brazilian}
 	\email{inacio.guilherme@gmail.com}
-	\phone{+55 22 99923-1446}
+	\phone{+55 22 99923 1446}
 	\location{Nova Friburgo, Brazil}
 
 	\linkedin{linkedin.com/in/inacioguilherme}
 	\github{github.com/ingoncalves} 
+	\skype{guilherme.i.g.} 
 
    %\orcid{orcid.org/0000-0002-6807-3172} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
@@ -95,23 +95,23 @@
 \cvevent{Full-stack Developer \& Software Engineer}{O2 Filmes}{Sept 2018 -- Present}{Remote}
 \begin{itemize}
 \item Developed a robust and online text editor and project manager dedicated to screenwriters.
-\item Developed its Back-end using Ruby on Rails and its Front-end using React, operating in a large-scale distributed architecture.
-\item Implemented features such as multi-user tracking, data visualization, notifications, file upload, advanced graphical interface features, etc.
+\item Developed its Back-end using \textbf{Ruby on Rails} and its Front-end using \textbf{React}, operating in a \textbf{large-scale distributed architecture} and following the \textbf{micro-services} approach.
+\item Implemented features such as \textbf{multi-user tracking}, \textbf{data visualization with D3}, \textbf{notifications}, \textbf{importing, parsing and exporting files}, \textbf{advanced graphical interface features}, etc.
 \end{itemize}
 
 \divider%
 
-\cvevent{Data Quality Validator}{CERN -- European Organization for Nuclear Research}{Feb 2021 -- Mar 2021}{Remote}
-\begin{itemize}
-	\item Analysis of data quality and integrity of electronic components in the Tile Calorimeter, the hadron calorimeter covering the central region of the ATLAS experiment at the Large Hadron Collider.
-\end{itemize}
+%\cvevent{Data Quality Validator}{CERN -- European Organization for Nuclear Research}{Feb 2021 -- Mar 2021}{Remote}
+%\begin{itemize}
+	%\item Analysis of data quality and integrity of electronic components in the Tile Calorimeter, the hadron calorimeter covering the central region of the ATLAS experiment at the Large Hadron Collider.
+%\end{itemize}
 
-\divider%
+%\divider%
 
-\cvevent{Scientific Researcher \& Software Engineer}{CERN -- European Organization for Nuclear Research}{Mar 2019 -- Mar 2020}{Geneva, Switzerland}
+\cvevent{Software Engineer \& Scientific Researcher}{CERN -- European Organization for Nuclear Research}{Mar 2019 -- Mar 2020}{Geneva, Switzerland}
 \begin{itemize}
 	\item Designed and developed an energy estimation algorithm for the ATLAS Tile Calorimeter.
-	\item The tool is based on machine learning techniques and was developed using C++ in a world-wide distributed system.
+	\item The tool is based on \textbf{machine learning} techniques and was developed using \textbf{C++} in a world-wide \textbf{distributed system}.
 	\item Created a pulse generator used to simulate electronic readouts for data processing and physics analysis.
 \end{itemize}
 
@@ -119,23 +119,34 @@
 
 \cvevent{Full-stack Developer \& Software Engineer}{DataHex Computer Technology}{May 2016 -- Jun 2018}{Nova Friburgo, Brazil}
 \begin{itemize}
-\item Developed and Designed an Event Ticket application for Android with data synchronization and Bluetooth printer.
-\item Developed and Designed a cloud-based Point of Sale system with business management features.
-\item Developed its Back-end using NodeJS and its Front-end using AngularJS following the micro-services approach.
-\item Developed a desktop application using Electron with data synchronization across the internet and among multiple local network nodes (using P2P).
-\item Developed an industry-standard authentication system implementing the OAuth 2.0 and OpenID Connect protocols.
+\item Developed and Designed an Event Ticket application for \textbf{Android} with data synchronization and Bluetooth printer.
+\item Developed and Designed a \textbf{cloud-based} Point of Sale system with business management features.
+\item Developed its Back-end using \textbf{NodeJS} and its Front-end using \textbf{AngularJS} following the \textbf{micro-services} approach.
+\item Developed a desktop application using \textbf{Electron} with data synchronization across the internet and among multiple local network nodes (using P2P).
+\item Developed an industry-standard authentication system implementing the \textbf{OAuth 2.0} and \textbf{OpenID Connect} protocols.
+\end{itemize}
+
+\divider%
+
+\cvevent{Full-stack Developer \& Mobile Developer}{Vista Group Network}{Jun 2014 -- Apr 2016}{Nova Friburgo, Brazil}
+\begin{itemize}
+\item Developed a \textbf{cloud-managed} parking software using \textbf{Android} devices for ticketing and infringement monitoring.  
+\item Developed an \textbf{iOS} and \textbf{Android} application for parking tickets purchase using \textbf{Ionic} and \textbf{VB-Net}.
+\item Created software to detect free parking spaces using \textbf{image processing} from surveillance cameras. The tool was developed using \textbf{Python} and \textbf{Open-CV}\@.
 \end{itemize}
 
 \clearpage
 
-\cvsection[page2sidebar-en]{Experience}
-\cvevent{Full-stack Developer \& Mobile Developer}{Vista Group Network}{Jun 2014 -- Apr 2016}{Nova Friburgo, Brazil}
-\begin{itemize}
-\item Developed a cloud-managed parking software using Android devices for ticketing and infringement monitoring.  
-\item Developed an iOS and Android application for parking tickets purchase using Ionic and VB-Net.
-\item Created software to detect free parking spaces using image processing from surveillance cameras. The tool was developed using Python and Open-CV\@.
-\end{itemize}
+\cvsection[page2sidebar-en]{Open Source Contributions}
+\cvcontribution{Etherpad}{A real-time collaborative editor for the web}{https://github.com/ether/etherpad-lite/commits?author=ingoncalves}
 
+\divider%
+
+\cvcontribution{Athena}{The ATLAS Experiment's main offline software}{https://gitlab.cern.ch/atlas/athena/-/merge_requests?state=all&author_username=ginaciog}
+
+\divider%
+
+\cvcontribution{Scilab}{Free and Open Source software for numerical computation}{https://github.com/scilab/scilab/commits?author=ingoncalves}
 
 \cvsection{Publications}
 

@@ -2,6 +2,8 @@
 % This is altacv.cls (v1.1.5, 1 December 2018) written by
 % LianTze Lim (liantze@gmail.com).
 %
+% https://github.com/liantze/AltaCV
+%
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
 %% of this license or (at your option) any later version.
@@ -39,6 +41,7 @@
 \RequirePackage{fontawesome}
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
+\RequirePackage{url}
 
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
@@ -128,6 +131,7 @@
 \newcommand{\homepagesymbol}{\faChain}
 \newcommand{\locationsymbol}{\faMapMarker}
 \newcommand{\linkedinsymbol}{\faLinkedin}
+\newcommand{\skypesymbol}{\faSkype}
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
 \newcommand{\orcidsymbol}{\aiOrcid}
@@ -144,6 +148,7 @@
 \newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
+\newcommand{\skype}[1]{\printinfo{\skypesymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
@@ -196,6 +201,17 @@
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
   \medskip\normalsize
 }
+
+\newcommand{\cvcontribution}[3]{%
+  {\large\color{emphasis}#1\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{
+  \textbf{\color{accent}#2}\par
+  \smallskip}
+  \ifstrequal{#3}{}{}{{\small\faLink\hspace{0.5em}\url{#3}}}\par
+  \medskip\normalsize
+}
+
 
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
