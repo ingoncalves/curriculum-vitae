@@ -204,7 +204,7 @@
 
 \newcommand{\cvcontribution}[3]{%
   {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  %\smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
