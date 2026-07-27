@@ -1,0 +1,112 @@
+%% ------------------------------------------------------------------
+%% identity.tex — Shared visual identity for CV and cover letters
+%%
+%% \input this file from any LaTeX document that should share the
+%% Gonçalves visual identity (colors, icons, tipography helpers,
+%% graphics search paths).
+%%
+%% Idempotent by design: safe to \input from documents that already
+%% loaded xcolor / fontawesome / graphicx (via altacv or otherwise).
+%% Uses \providecommand for macros so re-\input never errors.
+%%
+%% Callers currently include:
+%%   - applications/_shared/latex/cover-letter-template.tex
+%%   - applications/YYYY-MM-<slug>/cover-letter.tex (copied from template)
+%%   - Optionally the CV itself, if the shared identity refactor is applied.
+%% ------------------------------------------------------------------
+
+%% ------- Required packages (loaded only if not already loaded) -------
+\makeatletter
+\@ifpackageloaded{xcolor}{}{\usepackage{xcolor}}
+\@ifpackageloaded{fontawesome}{}{\usepackage{fontawesome}}
+\@ifpackageloaded{graphicx}{}{\usepackage{graphicx}}
+\@ifpackageloaded{tikz}{}{\usepackage{tikz}}
+\makeatother
+
+%% ------- Color palette (same values used by curriculum-en.tex) -------
+\definecolor{StPatricksBlue}{HTML}{1F3D77}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{333333}
+
+%% ------- Graphics search paths -------
+%% Lets \includegraphics{profile} resolve to english/profile.jpg from any
+%% depth the caller might be at. LaTeX tries these in order and uses the
+%% first match.
+\graphicspath{%
+    {./}%                          same folder as the caller
+    {./english/}%                  from project root
+    {../english/}%                 from applications/ (unlikely, but cheap)
+    {../../english/}%              from applications/YYYY-MM-<slug>/
+    {../../../english/}%           from applications/_shared/latex/
+}
+
+%% ------- Style helpers for cover letters -------
+%% Not used by the CV (altacv defines its own header macros), but harmless
+%% to have loaded. \providecommand only defines if not already defined.
+
+\providecommand{\senderName}[1]{%
+    {\fontsize{22pt}{28pt}\selectfont\bfseries\color{StPatricksBlue}#1}%
+}
+
+\providecommand{\senderTagline}[1]{%
+    {\fontsize{11pt}{14pt}\selectfont\itshape\color{SlateGrey}#1}%
+}
+
+\providecommand{\contactBullet}{%
+    \hspace{0.5em}\textcolor{StPatricksBlue}{$\bullet$}\hspace{0.5em}%
+}
+
+\providecommand{\dividerLine}{%
+    {\color{StPatricksBlue}\rule{\linewidth}{0.6pt}}%
+}
+
+\providecommand{\salutation}[1]{%
+    {\bfseries\color{SlateGrey}#1}%
+}
+
+\providecommand{\closing}[1]{%
+    {\bfseries\color{SlateGrey}#1}%
+}
+
+%% ------- Date and subject-line helpers for cover letters -------
+
+%% \letterDate{City}
+%% Renders "City, DD Month YYYY" right-aligned, in italic SlateGrey. Uses
+%% \today under the hood so the date is always current at compile time.
+%% Example: \letterDate{Lausanne}  ->  "Lausanne, 27 July 2026"
+\providecommand{\letterMonth}{%
+    \ifcase\month\or January\or February\or March\or April\or May\or June%
+    \or July\or August\or September\or October\or November\or December\fi%
+}
+\providecommand{\letterDate}[1]{%
+    \hfill{\itshape\color{SlateGrey}#1,~\the\day~\letterMonth~\the\year}%
+}
+
+%% \subjectLine{content}
+%% Renders a bold SlateGrey subject line. Common convention in formal
+%% European/Swiss/French letters (e.g. "Subject: ..." or "Object: ...").
+%% The caller decides whether to include a prefix.
+%% Example: \subjectLine{Subject: Application for Full Stack Engineer -- Ref. 2357}
+\providecommand{\subjectLine}[1]{%
+    {\bfseries\color{SlateGrey}#1}%
+}
+
+%% ------- Circular photo (matches altacv's \photo behavior in the CV) -------
+%% \circularPhoto{diameter}{filename}
+%% Renders a circular-cropped photo, resolving the filename via \graphicspath
+%% (so \circularPhoto{2.5cm}{profile} finds english/profile.jpg).
+%% The tikzpicture baseline is set to the top of the circle so that when used
+%% inside a minipage with [t] alignment, the picture aligns with the top of
+%% the row rather than the middle of the circle (default tikz behavior).
+%% Example: \circularPhoto{2.5cm}{profile}
+\providecommand{\circularPhoto}[2]{%
+    \begin{tikzpicture}[baseline=(currentphoto.north)]
+        \node[circle,minimum size=#1,inner sep=0pt,%
+            path picture={%
+                \node[inner sep=0pt] at (path picture bounding box.center) {%
+                    \includegraphics[width=#1]{#2}%
+                };%
+            }%
+        ] (currentphoto) {};
+    \end{tikzpicture}%
+}
