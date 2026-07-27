@@ -21,3 +21,9 @@
 
 This document uses the AltaCV class. 
 The basic template is found in ([view/open on Overleaf](https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv)).
+
+## Repository structure
+
+* `english/` — LaTeX source of the CV in English (canonical version).
+* `applications/` — versioned workspace tracking job applications: one folder per application, plus shared reference material and templates. See `applications/README.md` for the dashboard and folder conventions.
+
