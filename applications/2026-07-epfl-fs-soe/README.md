@@ -1,7 +1,7 @@
 # EPFL — Full Stack Software Engineer (School of Engineering)
 
-**Status**: 🟡 `to-apply`
-**Applied**: (empty until submission)
+**Status**: 🔵 `applied`
+**Applied**: 2026-07-27
 **Job URL**: <https://careers.epfl.ch/job/Lausanne-Full-Stack-Software-Engineer/1165142955/>
 **Job Ref**: 2357
 **Location**: Lausanne, Switzerland — On-site (implied; EPFL is a campus institution)
@@ -17,7 +17,7 @@
 ## Timeline
 
 - 2026-07-23 — Identified via EPFL careers page
-- 2026-07-XX — Application to be submitted (aiming within 5–7 days)
+- 2026-07-27 — Application submitted via careers.epfl.ch (SuccessFactors)
 
 ## Fit assessment
 

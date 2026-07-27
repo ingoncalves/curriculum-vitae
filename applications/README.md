@@ -1,14 +1,14 @@
 # Applications Dashboard
 
-Last updated: 2026-07-23
+Last updated: 2026-07-27
 
 ## Active pipeline
 
 | Status | Company | Role | Applied | Location | Comp expected | Next action |
 |---|---|---|---|---|---|---|
+| 🔵 Applied | EPFL | Full Stack (School of Engineering) | 2026-07-27 | Lausanne | ~120k CHF (CDI, public) | wait for response |
 | 🟡 To apply | Sonar | Staff Full Stack (Java, React) | — | Geneva | ~250k CHF total | submit application |
 | 🟡 To apply | Proton | Senior FE (Docs / Standard Notes) | — | Geneva or London | ~170k CHF total | submit application |
-| 🟡 To apply | EPFL | Full Stack (School of Engineering) | — | Lausanne | ~120k CHF (CDI, public) | submit application |
 | ❌ Rejected | CERN | Full-Stack Engineer (IT-CA-IR-2026-66-LD) | 2026-04-22 | Geneva | ~9.2k CHF/mo (LD staff) | debrief done |
 
 ## Status legend
