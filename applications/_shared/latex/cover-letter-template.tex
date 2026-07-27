@@ -1,0 +1,150 @@
+%% ------------------------------------------------------------------
+%% Cover Letter template — visually paired with the AltaCV-based CV
+%%
+%% Shared visual identity (colors, icons, macros, graphics paths) lives
+%% in identity.tex and is \input'd below.
+%%
+%% To use for a specific application
+%%   1. Copy this file to the target application folder,
+%%      e.g. applications/2026-07-epfl-fs-soe/cover-letter.tex
+%%   2. Update the \input path (see the NOTE below the \input line).
+%%   3. Replace the <TODO ...> placeholders with role-specific content.
+%%   4. Compile with: pdflatex + pdflatex (two passes, same as the CV).
+%%
+%% Requirements: pdflatex + lato + fontawesome (same as the CV).
+%% ------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+%% ------- Font and encoding (mirrors the CV's pdflatex branch) -------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+%% ------- Layout -------
+\usepackage[a4paper, top=1.5cm, bottom=1.75cm, left=2cm, right=2cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+\renewcommand{\baselinestretch}{1.15}
+
+%% ------- Ragged right (matches the CV's ragged2e option) -------
+\usepackage[document]{ragged2e}
+
+%% ------- Hyperlinks -------
+\usepackage{hyperref}
+
+%% ------- Shared visual identity -------
+%% NOTE: this path is relative to THIS .tex file's location.
+%%   - When the file lives in applications/_shared/latex/, use: {identity}
+%%   - When copied to applications/YYYY-MM-<slug>/, update to: {../_shared/latex/identity}
+%%   - From the CV in english/, would be: {../applications/_shared/latex/identity}
+\input{identity}
+
+%% ------- Hyperlink colors (must come after xcolor is loaded via identity) -------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=StPatricksBlue,
+    linkcolor=StPatricksBlue,
+    pdftitle={Guilherme I. Goncalves - Cover Letter},
+    pdfauthor={Guilherme I. Goncalves}
+}
+
+%% Body text color (matches CV)
+\color{LightGrey}
+
+%% ==================================================================
+\begin{document}
+
+%% ------- HEADER: name + tagline + contact info (left column) and photo (right) -------
+%% Layout matches the CV: name/tagline/contact stacked in one minipage, photo
+%% alongside in a separate minipage, both top-aligned. Contact info follows the
+%% tagline directly with a controlled line break rather than a \vspace, so the
+%% spacing hierarchy stays tight.
+%%
+%% Uses explicit dimensions to guarantee side-by-side layout:
+%%   text minipage = linewidth - 3cm (leaves room for photo + gap)
+%%   photo minipage = 2.7cm (2.5cm photo + 0.2cm buffer)
+%%   \hfill absorbs the ~0.3cm remaining slack
+
+\noindent%
+\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}%
+\senderName{Guilherme Inácio Gonçalves}\\[0.4em]
+\senderTagline{Senior Full-Stack Software Engineer}\\[0.8em]
+{\color{LightGrey}\small
+\faEnvelope\ \href{mailto:ginaciog@cern.ch}{ginaciog@cern.ch}\contactBullet%
+\faPhone\ +55 22 99923 1446\contactBullet%
+\faMapMarker\ Nova Friburgo, Brazil\\[0.3em]
+\faLinkedin\ \href{https://linkedin.com/in/inacioguilherme}{linkedin.com/in/inacioguilherme}\contactBullet%
+\faGithub\ \href{https://github.com/ingoncalves}{github.com/ingoncalves}
+}%
+\end{minipage}%
+\hfill%
+%% Uncomment the photo minipage below to include the profile picture (found via
+%% \graphicspath in identity.tex, which resolves to english/profile.jpg from any
+%% folder depth). \circularPhoto matches altacv's circular photo treatment.
+%\begin{minipage}[t]{2.7cm}%
+%\circularPhoto{2.5cm}{profile}%
+%\end{minipage}%
+\par
+
+\vspace{0.75em}
+\dividerLine
+\vspace{1.25em}
+
+%% ------- DATE (right-aligned; automatic via \today) -------
+%% \letterDate{City} renders "City, DD Month YYYY". The date updates
+%% automatically each time the document is compiled.
+
+\letterDate{<TODO: City (e.g. Lausanne)>}
+
+\vspace{1em}
+
+%% ------- RECIPIENT BLOCK -------
+%% Active by default; formal applications (Swiss/French/European institutions)
+%% typically include this. For ATS-based applications (Greenhouse, Lever,
+%% SuccessFactors) where the recipient is not required, comment the block out.
+
+{\color{SlateGrey}
+<TODO: Recipient name or department>\\
+<TODO: Position/Title>\\
+<TODO: Company / Institution>\\
+<TODO: Street address>\\
+<TODO: Postal code, City>
+}
+
+\vspace{1.25em}
+
+%% ------- SUBJECT LINE -------
+%% Common convention in formal European correspondence. For informal /
+%% ATS-based applications, comment out or delete this line.
+
+\subjectLine{<TODO: Subject: Application for <ROLE> -- Ref. <REF>>}
+
+\vspace{1em}
+
+%% ------- SALUTATION -------
+
+\salutation{Dear Hiring Team,}
+
+%% ------- BODY -------
+
+<TODO: Opening paragraph. Hook that positions your profile and states the intent to apply for the specific role. Roughly 2-3 lines.>
+
+<TODO: Body paragraph 2. Relevant background and career context. Highlight CERN, PhD, open-source contributions where they resonate with the target company.>
+
+<TODO: Body paragraph 3. Specific fit for this role. Concrete recent work that maps to the posting's requirements. Include tech-stack alignment and any adjacent-experience arguments.>
+
+<TODO: Body paragraph 4. Why this company specifically. Mission, values, engineering culture, and personal alignment.>
+
+<TODO: Closing paragraph. Availability (relocation, start date), thank you, next-step invitation.>
+
+\vspace{1em}
+
+\closing{Sincerely,}
+
+\vspace{2em}
+
+\textbf{Guilherme Gonçalves}
+
+\end{document}

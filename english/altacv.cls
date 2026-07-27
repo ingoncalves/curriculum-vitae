@@ -182,7 +182,7 @@
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
-  {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
+  {\ifstrequal{#2}{}{}{\color{heading}\rule{\linewidth}{2pt}\par}\medskip}
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -204,7 +204,7 @@
 
 \newcommand{\cvcontribution}[3]{%
   {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  %\smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
