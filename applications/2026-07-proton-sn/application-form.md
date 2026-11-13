@@ -7,76 +7,89 @@
 
 - **First name**: Guilherme
 - **Last name**: Gonçalves
-- **Email**: ginaciog@cern.ch (CERN affiliation matters for Proton given their CERN founding)
+- **Email**: ginaciog@cern.ch
 - **Phone**: +55 22 99923 1446
 - **Country**: Brazil
 - **Location (City)**: Nova Friburgo
 
 ## Documents attached
 
-- **Resume/CV**: `cv-guilherme-goncalves-2026-07.pdf` (base CV, no tweaks — see `cv-notes.md`)
-- **Cover letter**: `cv-guilherme-goncalves-2026-07-cover-proton-sn.pdf` (converted from `cover-letter.md` in this folder)
+- **Resume/CV**: `Goncalves_Guilherme_CV.pdf` (compiled from `english/curriculum-en.tex`)
+- **Cover letter**: `Goncalves_Guilherme_CoverLetter.pdf` (compiled from `cover-letter.tex` in this folder)
 
 ## Public profile links
 
 - **LinkedIn**: <https://www.linkedin.com/in/inacioguilherme/>
 - **GitHub**: <https://github.com/ingoncalves>
-- Optional: link to `github.com/lorenzetti-ufrj-br/lorenzetti` if there is a portfolio-URL field separate from LinkedIn/GitHub
+
+---
 
 ## Custom questions
 
 ### Q1: Why do you think this role is a good fit for you?
 
+**Field character limit**: ~250 chars (empirically confirmed — form truncated a longer answer at "pagin").
+
 ```
-My background sits at exactly the intersection Proton seems to look for. Since 2019 I have been a CERN user on the ATLAS Tile Calorimeter (full authorship within the Collaboration in 2024) and completed my PhD in Computational Modeling in February 2026. The PhD work produced two open-source contributions used internationally by the high-energy physics community: the calorimetry-pulse-simulator library (github.com/ingoncalves/calorimetry-pulse-simulator) and Lorenzetti, a general-purpose calorimetry simulation framework published in Elsevier in 2023. I have also contributed upstream to Athena, Etherpad, and Scilab.
-
-In parallel, I have spent the last four years as a Senior Full-Stack Engineer at Siteimprove, working extensively with TypeScript, React, and modern front-end architecture, including ownership of the Fancy Design System (a React component library focused on accessibility and reusability). I also recently co-founded Orkast, a SaaS platform for Portuguese SMEs, where I run the entire stack end-to-end.
-
-Particularly relevant to a security-conscious role like this one: I am currently part of Siteimprove's FedRAMP certification effort, which involves systematic vulnerability remediation across more than 200 repositories. We use Aikido to detect security issues at scale, and a meaningful share of my engineering time over the past months has gone into triaging findings (many of them mapping to the OWASP top ten), prioritizing them, and shipping fixes in production code.
-
-For the Standard Notes role specifically, encrypted client-side architecture is exactly where my rigor-heavy academic background, product engineering experience, and recent security work intersect productively. Features like encrypted search and sync are intellectually attractive precisely because they push the boundaries of what is possible without a server-side shortcut.
+Four strongest matches: CERN scientific work (Master's + PhD 2026); 4 years on Teksto online editor (Etherpad, then ProseMirror); owning Siteimprove's Fancy Design System (React); FedRAMP security and cryptography across 200+ repos.
 ```
 
-**Char count**: ~1690 (verify limit before submission; Greenhouse text areas are usually generous)
+**Char count**: 232 / ~250
 
 ### Q2: What is it about Proton that excites you?
 
+Field has no explicit character limit. Answer stays substantive but not extensive, centered on Proton's CERN DNA as the primary draw.
+
 ```
-Three things, in order of importance.
-
-First, the mission. Privacy as a default is not a marketing line for me. I have lived in Geneva and seen the kind of public-interest engineering CERN represents. Proton being CERN-founded, profitable, and not VC-dependent means the company can stay accountable to users rather than capital. That alignment is rare, and it is what allows the engineering to compound rather than churn under quarterly pressure.
-
-Second, open-source as a first-class commitment. I have contributed to Athena, Etherpad, Scilab, the Lorenzetti calorimetry simulation framework, and maintain my own scientific computing library used internationally. Building publicly is how I think about engineering.
-
-Third, the team density. The hiring philosophy you describe (small teams of exceptional talent over larger teams with lower talent density) matches the kind of environment I want to work in. The combination of intellectual rigor, mission-driven work, and pragmatic shipping is rare enough that I noticed.
+Above all, Proton's CERN DNA. I have deep admiration and respect for CERN, and I recognize its character in Proton: privacy as a first-class value, open-source as a genuine commitment, and a mission accountable to users rather than to capital. Together those pillars give Proton a rare, almost philanthropic identity in software engineering, building technology for the common good and giving it back to humanity, in the same spirit CERN has embodied for decades.
 ```
 
-**Char count**: ~1030
+**Char count**: 463
+
+---
 
 ## Salary expectations
 
-- **Number**: 150000
-- **Currency**: CHF
-- **Type**: Annual gross
+- **Number**: `150000`
+- **Select the right choice between** (dropdown, likely gross annual / gross monthly / net): `Gross annual`
+- **Currency**: `CHF`
 - **Note**: negotiable; total comp target with stock options 160–180k CHF
 
 ## Availability
 
-- **When can you start**: With required work permit processing, realistically 2 to 3 months from offer acceptance.
+- **When can you start working with us?**:
+
+```
+With required work permit processing, realistically 2 to 3 months from offer acceptance.
+```
 
 ## Office location preference
 
-- **From what Proton's office location you'd like to work?**: Geneva, Switzerland
+- **From what Proton's office location you'd like to work?**:
+
+```
+Geneva, Switzerland.
+```
 
 ## Work permit / eligibility
 
-- **Do you have an eligibility / working permit to work in this particular location?**: No
-- **If yes, specify**: (leave blank)
+- **Do you have an eligibility / working permit to work in this particular location?**: `No`
+- **If yes, what type**: (leave blank)
 
 ## Anything else you want to share
 
 ```
-My family of three (myself, wife, one-year-old daughter) is fully aligned with relocation to Geneva. My wife plans to stay home initially to care for our daughter until she reaches école obligatoire age.
+I am a Brazilian national and would require a Swiss B permit for the Geneva-based role. Returning to Geneva as a family is a shared dream for us: my wife and I are both fully aligned with the move, and we look forward to raising our one-year-old daughter in a city we love.
 ```
 
-(Optional signal that relocation is not exploratory but committed. Skip if not helpful for the specific role.)
+**Char count**: 273
+
+---
+
+## Post-submission checklist
+
+- [ ] Submitted via Greenhouse
+- [ ] Update this file's "Submitted on" field with the actual date
+- [ ] Update `README.md` in this folder (status `to-apply` → `applied` + timeline)
+- [ ] Update `applications/README.md` dashboard row
+- [ ] Consider a soft outreach to Ilia Kebets (LinkedIn DM was sent April 2026 with no response; a follow-up mentioning the Proton application is optional and not required)

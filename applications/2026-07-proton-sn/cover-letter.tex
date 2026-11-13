@@ -1,0 +1,122 @@
+%% ------------------------------------------------------------------
+%% Cover Letter — Proton, Senior Front End Engineer (Docs / Standard Notes)
+%%
+%% Based on applications/_shared/latex/cover-letter-template.tex
+%% Compile: pdflatex cover-letter.tex (twice for hyperref cross-refs)
+%% ------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+%% ------- Font and encoding (mirrors the CV) -------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+%% ------- Layout -------
+\usepackage[a4paper, top=1.5cm, bottom=1.75cm, left=2cm, right=2cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+\renewcommand{\baselinestretch}{1.15}
+
+%% ------- Ragged right -------
+\usepackage[document]{ragged2e}
+
+%% ------- Hyperlinks -------
+%% Enable line breaks at hyphens inside URLs before hyperref loads url
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+
+%% ------- Shared visual identity -------
+\input{../_shared/latex/identity}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=StPatricksBlue,
+    linkcolor=StPatricksBlue,
+    pdftitle={Guilherme I. Goncalves - Cover Letter - Proton},
+    pdfauthor={Guilherme I. Goncalves}
+}
+
+\color{LightGrey}
+
+%% ==================================================================
+\begin{document}
+
+%% ------- HEADER: name + tagline + contact info (left) + circular photo (right) -------
+
+\noindent%
+\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}%
+\senderName{Guilherme Inácio Gonçalves, Ph.D.}\\[0.4em]
+\senderTagline{Senior Full-Stack Software Engineer}\\[0.8em]
+{\color{LightGrey}\small
+\faEnvelope\ \href{mailto:ginaciog@cern.ch}{ginaciog@cern.ch}\contactBullet%
+\faPhone\ +55 22 99923 1446\contactBullet%
+\faMapMarker\ Nova Friburgo, Brazil\\[0.3em]
+\faLinkedin\ \href{https://linkedin.com/in/inacioguilherme}{linkedin.com/in/inacioguilherme}\contactBullet%
+\faGithub\ \href{https://github.com/ingoncalves}{github.com/ingoncalves}
+}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{2.7cm}%
+\circularPhoto{2.5cm}{profile}%
+\end{minipage}%
+\par
+
+\vspace{0.75em}
+\dividerLine
+\vspace{1.25em}
+
+%% ------- DATE -------
+
+\letterDate{Geneva}
+
+\vspace{1em}
+
+%% ------- RECIPIENT BLOCK -------
+
+{\color{SlateGrey}
+Recruitment Team\\
+Standard Notes\\
+Proton Technologies AG\\
+Route de la Galaise 32\\
+CH-1228 Plan-les-Ouates, Switzerland
+}
+
+\vspace{1.25em}
+
+%% ------- SUBJECT LINE -------
+
+\subjectLine{Subject: Application for Senior Front End Engineer, Standard Notes}
+
+\vspace{1em}
+
+%% ------- SALUTATION -------
+
+\salutation{Dear Hiring Team,}
+
+%% ------- BODY -------
+
+My career sits at an unusual intersection: full-stack software engineering at scale, scientific software at CERN, and an active commitment to open-source. Proton is one of the few companies where all three of those threads pull in the same direction, which is why I am writing today.
+
+Since 2019 I have been a CERN user on the ATLAS Tile Calorimeter, working within the Athena open-source framework and achieving full ATLAS authorship in 2024. I defended my PhD in Computational Modeling in February 2026, with research on signal estimation for high-energy calorimeters under HL-LHC luminosity conditions. The work produced two open-source contributions used internationally by the high-energy physics community: the calorimetry-pulse-simulator library (\href{https://github.com/ingoncalves/calorimetry-pulse-simulator}{\nolinkurl{github.com/ingoncalves/calorimetry-pulse-simulator}}) and Lorenzetti (\href{https://github.com/lorenzetti-ufrj-br/lorenzetti}{\nolinkurl{github.com/lorenzetti-ufrj-br/lorenzetti}}), a general-purpose calorimetry simulation framework I co-developed and published in Elsevier in 2023. I have also contributed upstream to Athena, Etherpad, and Scilab.
+
+Most directly relevant to the Standard Notes role: from 2018 to 2022 I built Teksto at O2 Filmes, a collaborative online text editor for screenwriters (moving into a Technical Lead role in the last year). Over four years I owned the editor architecture and its most complex features: real-time multi-user collaboration, versioning and backup, text-attribute systems (tags and comments), pagination, revision mode, multi-format export, and printing. The initial engine was Etherpad, a mature open-source real-time collaborative editor, which we later migrated to ProseMirror for a modular, React-oriented architecture better aligned with modern component-based front-ends. This is direct hands-on experience with the class of problems Standard Notes solves: editor capabilities, tagging systems, advanced note formatting, and sync.
+
+Since 2022 I have been a Senior Full-Stack Engineer at Siteimprove, a global SaaS platform for digital accessibility and content quality, working daily across TypeScript, React, Java, and Node.js on distributed services and enterprise front-ends. I have ownership experience over Siteimprove's Fancy Design System (\href{https://fancy.siteimprove.com}{\nolinkurl{fancy.siteimprove.com}}), a React component library with strong focus on accessibility (WAI-ARIA). I am also part of the company's FedRAMP certification effort, triaging security findings (many mapping to the OWASP top ten) across more than 200 repositories and shipping remediation code into production. On the side I co-founded Orkast, a multi-tenant SaaS platform where I own the full stack end-to-end, with AI-driven development practices integrated as a first-class part of my daily workflow.
+
+What draws me to Proton beyond the technical fit is the alignment of mission, ownership model, and engineering culture. Privacy as a default is not a marketing line for me. I have lived in Geneva and seen first-hand the kind of public-interest engineering CERN represents, and Proton being CERN-founded, profitable, and not VC-dependent means the company can stay accountable to users rather than to capital. The combination of intellectual rigor, mission-driven work, open-source commitment, and pragmatic shipping is rare enough that I noticed.
+
+Although Standard Notes is a Front-End role, my experience spans the entire web software stack, including back-end, DevOps, and cloud infrastructure, as well as data analysis and scientific computing. That breadth means I can contribute beyond the immediate scope of the role, engage meaningfully with adjacent teams, and grow with the product over time.
+
+I would welcome the opportunity to discuss how my background could contribute to the Standard Notes team, and I am ready to relocate to Geneva. Thank you for considering my application.
+
+\vspace{1em}
+
+\closing{Sincerely,}
+
+\vspace{2em}
+
+\textbf{Guilherme Gonçalves}
+
+\end{document}
