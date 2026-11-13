@@ -28,6 +28,17 @@
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{333333}
 
+%% ------- URL rendering style -------
+%% Renders URLs (via \url and \nolinkurl) in the body font rather than the
+%% default monospace typewriter. Requires hyperref (or url) to have loaded
+%% already; safe here because identity.tex is \input'ed after hyperref in
+%% cover letter templates.
+\makeatletter
+\@ifpackageloaded{hyperref}{\urlstyle{same}}{%
+    \@ifpackageloaded{url}{\urlstyle{same}}{}%
+}
+\makeatother
+
 %% ------- Graphics search paths -------
 %% Lets \includegraphics{profile} resolve to english/profile.jpg from any
 %% depth the caller might be at. LaTeX tries these in order and uses the

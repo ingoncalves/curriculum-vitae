@@ -32,6 +32,9 @@
 \usepackage[document]{ragged2e}
 
 %% ------- Hyperlinks -------
+%% \PassOptionsToPackage{hyphens}{url} must come BEFORE hyperref loads url,
+%% so that long URLs written inline (in \href) can break at hyphens.
+\PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref}
 
 %% ------- Shared visual identity -------
