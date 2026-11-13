@@ -1,0 +1,120 @@
+%% ------------------------------------------------------------------
+%% Cover Letter — CERN, Software Engineer (SY-BI-SW-2026-175-LD)
+%%
+%% Based on applications/_shared/latex/cover-letter-template.tex
+%% Compile: pdflatex cover-letter.tex (twice for hyperref cross-refs)
+%% ------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+%% ------- Font and encoding (mirrors the CV) -------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+%% ------- Layout -------
+\usepackage[a4paper, top=1.5cm, bottom=1.75cm, left=2cm, right=2cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+\renewcommand{\baselinestretch}{1.15}
+
+%% ------- Ragged right -------
+\usepackage[document]{ragged2e}
+
+%% ------- Hyperlinks -------
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+
+%% ------- Shared visual identity -------
+\input{../_shared/latex/identity}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=StPatricksBlue,
+    linkcolor=StPatricksBlue,
+    pdftitle={Guilherme I. Goncalves - Cover Letter - CERN SY-BI-SW},
+    pdfauthor={Guilherme I. Goncalves}
+}
+
+\color{LightGrey}
+
+%% ==================================================================
+\begin{document}
+
+%% ------- HEADER: name + tagline + contact info (left) + circular photo (right) -------
+
+\noindent%
+\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}%
+\senderName{Guilherme Inácio Gonçalves, Ph.D.}\\[0.4em]
+\senderTagline{Senior Full-Stack Software Engineer}\\[0.8em]
+{\color{LightGrey}\small
+\faEnvelope\ \href{mailto:ginaciog@cern.ch}{ginaciog@cern.ch}\contactBullet%
+\faPhone\ +55 22 99923 1446\contactBullet%
+\faMapMarker\ Nova Friburgo, Brazil\\[0.3em]
+\faLinkedin\ \href{https://linkedin.com/in/inacioguilherme}{linkedin.com/in/inacioguilherme}\contactBullet%
+\faGithub\ \href{https://github.com/ingoncalves}{github.com/ingoncalves}
+}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{2.7cm}%
+\circularPhoto{2.5cm}{profile}%
+\end{minipage}%
+\par
+
+\vspace{0.75em}
+\dividerLine
+\vspace{1.25em}
+
+%% ------- DATE -------
+
+\letterDate{Geneva}
+
+\vspace{1em}
+
+%% ------- RECIPIENT BLOCK -------
+
+{\color{SlateGrey}
+Recruitment Team\\
+SY-BI-SW Group (Beam Instrumentation Software)\\
+CERN — European Organization for Nuclear Research\\
+1211 Geneva 23, Switzerland
+}
+
+\vspace{1.25em}
+
+%% ------- SUBJECT LINE -------
+
+\subjectLine{Subject: Application for Software Engineer (SY-BI-SW-2026-175-LD)}
+
+\vspace{1em}
+
+%% ------- SALUTATION -------
+
+\salutation{Dear Hiring Team,}
+
+%% ------- BODY -------
+
+This is the role I have spent years preparing for, and I want to be direct about why. My path through Computer Engineering, then a Master's and PhD in Computational Modeling focused on ATLAS calorimetry, alongside a DELF B2 diploma in French, was built around a return to CERN as a scientific software engineer. My PhD, defended in February 2026, was on signal estimation for high-energy calorimeters under HL-LHC luminosity conditions, focused on the exact intersection this posting describes: deterministic real-time software, machine-learning solutions for signal classification and diagnostics, and modernisation of legacy instrumentation code.
+
+Since 2019 I have been a CERN user on the ATLAS Tile Calorimeter, working within the Athena open-source framework and achieving full authorship in the ATLAS Collaboration in 2024. During Long Shutdown 2, I contributed to the maintenance and upgrade of the Tile Muon Digitizer Board software, ensuring compatibility with upgraded detector electronics. That is direct experience with the shutdown-era refactor, testing, and recommissioning workflow the SY-BI-SW group targets for LS3.
+
+The AI/ML side of the role is where my PhD lands most directly. It produced two open-source contributions used internationally by the high-energy physics community: the calorimetry-pulse-simulator library (\href{https://github.com/ingoncalves/calorimetry-pulse-simulator}{\nolinkurl{github.com/ingoncalves/calorimetry-pulse-simulator}}) and Lorenzetti (\href{https://github.com/lorenzetti-ufrj-br/lorenzetti}{\nolinkurl{github.com/lorenzetti-ufrj-br/lorenzetti}}), a general-purpose calorimetry simulation framework I co-developed and published in Elsevier in 2023. Both are built in C++ and Python and underpinned my ML research: optimal filtering with noise whitening on real proton-proton collision data, plus a Multi-Layer Perceptron correction model for pile-up mitigation at high occupancy. That is essentially the same class of problem (signal classification, anomaly-adjacent diagnostics, ML-driven signal processing) the posting names for LS3 modernisation.
+
+On AI-assisted software engineering, which the posting lists as an advantage: I integrate large language models (Claude Code) as a first-class part of my daily engineering workflow at both Siteimprove and Orkast, and I integrate the Anthropic Claude API directly into product features. This gives me hands-on experience with agentic development workflows, not only as a user of AI tools but as an engineer building AI-integrated systems in production.
+
+Complementing the scientific track, I bring more than a decade of industry full-stack software engineering, currently as Senior Full-Stack Engineer at Siteimprove and previously as Technical Lead at O2 Filmes. That background contributes the software-engineering discipline the role requires: rigorous testing, CI/CD, code review, refactoring, and safe deployment of production systems.
+
+I lived in Geneva during my initial CERN period in 2019 and 2020, and my French (DELF B2) meets the language requirement of the role. Returning to CERN, this time bringing my wife and one-year-old daughter to Geneva, would fulfil a dream years in the making.
+
+I would welcome the opportunity to discuss how my background could contribute to the SY-BI-SW group. Thank you for your consideration.
+
+\vspace{1em}
+
+\closing{Sincerely,}
+
+\vspace{2em}
+
+\textbf{Guilherme Gonçalves}
+
+\end{document}
