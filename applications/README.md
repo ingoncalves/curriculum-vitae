@@ -7,6 +7,7 @@ Last updated: 2026-08-24
 | Status | Company | Role | Applied | Location | Comp expected | Next action |
 |---|---|---|---|---|---|---|
 | 🔵 **Applied (priority)** | **CERN** | **Software Engineer (SY-BI-SW-2026-175-LD)** | **2026-08-24** | Geneva | ~9.2k+ CHF/mo tax-free (grade 6-7, LD 5y) | **wait for response. Exceptional fit; consider heads-up to Bernardo Peralva (CERN) as referee.** |
+| 🟡 **To apply (deadline 2026-11-18)** | **CERN / ATLAS** | **Software Development Grant 2027, Project 6 (calo clustering for NN cell reco)** | — | Geneva (6 months) | CERN subsistence | **confirm UERJ contract + get support letter; finalize letter** |
 | 🔵 Applied | EPFL | Full Stack (School of Engineering) | 2026-07-27 | Lausanne | ~120k CHF (CDI, public) | wait for response |
 | 🟡 To apply | Sonar | Staff Full Stack (Java, React) | — | Geneva | ~250k CHF total | submit application |
 | 🟡 To apply | Proton | Senior FE (Docs / Standard Notes) | — | Geneva or London | ~170k CHF total | submit application |

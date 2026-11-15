@@ -1,0 +1,132 @@
+%% ------------------------------------------------------------------
+%% Application Letter: ATLAS Software Development Grants 2027
+%% Project 6: Update calorimeter clustering to support new (NN based
+%% or similar) cell energy reconstruction
+%%
+%% Based on applications/_shared/latex/cover-letter-template.tex
+%% Compile: latexmk -pdf cover-letter.tex
+%%
+%% Open TODOs are rendered in red (\todo{...}). Remove all before sending.
+%% ------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+%% ------- Font and encoding (mirrors the CV) -------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+%% ------- Layout -------
+\usepackage[a4paper, top=1.5cm, bottom=1.75cm, left=2cm, right=2cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+\renewcommand{\baselinestretch}{1.12}
+
+%% ------- Ragged right -------
+\usepackage[document]{ragged2e}
+
+%% ------- Hyperlinks -------
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+
+%% ------- Shared visual identity -------
+\input{../_shared/latex/identity}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=StPatricksBlue,
+    linkcolor=StPatricksBlue,
+    pdftitle={Guilherme I. Goncalves - Application - ATLAS Software Development Grants 2027},
+    pdfauthor={Guilherme I. Goncalves}
+}
+
+%% Visible placeholder for facts still to be confirmed
+\newcommand{\todo}[1]{{\color{red}\bfseries[TODO: #1]}}
+
+\color{LightGrey}
+
+%% ==================================================================
+\begin{document}
+
+%% ------- HEADER -------
+
+\noindent%
+\begin{minipage}[t]{\dimexpr\linewidth-3cm\relax}%
+\senderName{Guilherme Inácio Gonçalves, Ph.D.}\\[0.4em]
+\senderTagline{ATLAS Author, Rio de Janeiro State University (UERJ)}\\[0.8em]
+{\color{LightGrey}\small
+\faEnvelope\ \href{mailto:ginaciog@cern.ch}{ginaciog@cern.ch}\contactBullet%
+\faPhone\ +55 22 99923 1446\contactBullet%
+\faMapMarker\ Nova Friburgo, Brazil\\[0.3em]
+CERN ID: 837130\contactBullet%
+\faGithub\ \href{https://github.com/ingoncalves}{github.com/ingoncalves}
+}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{2.7cm}%
+\circularPhoto{2.5cm}{profile}%
+\end{minipage}%
+\par
+
+\vspace{0.75em}
+\dividerLine
+\vspace{1em}
+
+%% ------- DATE -------
+
+\letterDate{Nova Friburgo}
+
+\vspace{0.5em}
+
+%% ------- RECIPIENT BLOCK -------
+
+{\color{SlateGrey}
+ATLAS Software Development Grants Selection Committee\\
+CERN, 1211 Geneva 23, Switzerland
+}
+
+\vspace{1em}
+
+%% ------- SUBJECT LINE -------
+
+\subjectLine{Subject: Application for the 2027 ATLAS Software Development Grants, Project 6}
+
+\vspace{0.5em}
+
+%% ------- SALUTATION -------
+
+\salutation{Dear Members of the Selection Committee,}
+
+%% ------- BODY -------
+
+I am applying for the 2027 ATLAS Software Development Grants, with interest in Project~6, \emph{Update calorimeter clustering to support new (NN based or similar) cell energy reconstruction}. Enclosed are my CV and the supporting letter from the UERJ Institute Representatives. The project sits at the centre of my doctoral research: replacing optimal filtering with machine-learning-assisted cell energy reconstruction under HL-LHC pile-up, and understanding what that changes downstream.
+
+\textbf{\color{SlateGrey}Experience and contributions to ATLAS}
+
+I joined ATLAS in 2018 as a Master's student working on Tile Calorimeter energy reconstruction under high pile-up, supervised by Luciano Andrade and Bernardo Peralva. From 2019 to 2020 I worked on-site at CERN, implementing optimised digital Wiener filters in Athena, which led to an ATLAS conference paper (\href{https://cds.cern.ch/record/2752009/}{\nolinkurl{cds.cern.ch/record/2752009}}). In the same period I supported the Tile Muon Digitizer Board during LS2, served as a TileCal Data Quality validator, and led virtual ATLAS visits for public schools across Brazil.
+
+My Ph.D. in Computational Modelling at UERJ, defended in February 2026, developed hybrid energy estimators for the HL-LHC TileCal readout: linear filters combined with a Multi-Layer Perceptron correction for pile-up, benchmarked against optimal filtering across cell occupancy regimes. I completed my qualification task on this topic in 2023 to 2024 and became an ATLAS author in 2024. The results are documented in a published TileCal Internal Note (\href{https://cds.cern.ch/record/2894828/}{\nolinkurl{cds.cern.ch/record/2894828}}).
+
+Outside ATLAS, I developed the open-source \href{https://github.com/ingoncalves/calorimetry-pulse-simulator}{calorimetry-pulse-simulator} (C++ with Python bindings) and co-developed \href{https://github.com/lorenzetti-ufrj-br/lorenzetti}{Lorenzetti}, a general-purpose calorimetry simulation framework published in 2023. Both are used by other calorimetry groups for algorithm development and ML training. In parallel, I have more than eleven years of industry experience as a software engineer, currently Senior Full-Stack Engineer at Siteimprove and previously Technical Lead at O2 Filmes.
+
+\textbf{\color{SlateGrey}Interest in Project 6}
+
+The project asks for three things I have already worked on from different angles. First, the physics motivation: comparing NN-based cell energy reconstruction, and the pile-up noise information it provides, with optimal filtering is exactly the comparison my thesis made at the cell level; I would now carry it through to clustering and to electron and photon performance. Second, the software tasks: adding new per-cell information as decorations in \texttt{LArCellRec}, making it available to the \texttt{CaloRec} clustering algorithms behind a common configuration flag, keeping the optimal-filtering workflow bit-for-bit unchanged, and adding a CI test for the new data flow. Backward-compatible changes guarded by configuration, regression tests and CI are daily practice in my industry work, and my Athena experience means I can start productively, while learning the LAr and clustering code under the supervision of the project experts. Third, the follow-up: producing simulated Run-4 samples with the new reconstruction to support the e/$\gamma$ studies due by Summer 2028.
+
+\textbf{\color{SlateGrey}Longer-term commitment}
+
+I intend to stay with this work after the stay at CERN: completing the sample production and supporting the e/$\gamma$ studies through the Summer 2028 milestone, and then contributing to the maintenance of the clustering software for Run~4, from UERJ, where my affiliation is registered with CERN until June 2029. The UERJ group (Bernardo Peralva, Gustavo Libotte and Tiago Quirino) has worked on calorimeter signal reconstruction in ATLAS for years, and the supporting letter describes how the institute will take up these topics with students from our Computational Modelling and Computer Engineering programmes.
+
+Thank you for considering my application. I remain at your disposal for any further information.
+
+\vspace{0.5em}
+
+\closing{Sincerely,}
+
+\vspace{1.5em}
+
+\textbf{Guilherme I. Gonçalves, Ph.D.}\\
+{\small ATLAS Author, Rio de Janeiro State University (UERJ), ATLAS/Brazil Cluster}
+
+\end{document}
