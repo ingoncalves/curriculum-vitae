@@ -1,0 +1,65 @@
+%% ------------------------------------------------------------------
+%% UERJ / IPRJ support letter: ATLAS Software Development Grants 2027
+%%
+%% Reproduces the IPRJ letterhead template (CartaGuilherme.docx):
+%% A4, 2 cm margins, Arial, centred logo (9.25 cm wide).
+%% Text source: uerj-support-letter-draft.md (approved by Bernardo).
+%% Compile: xelatex uerj-support-letter.tex
+%% ------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[a4paper, top=1.2cm, bottom=1.2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.04}
+\usepackage{ragged2e}
+\pagestyle{empty}
+
+\newcommand{\signature}[4]{%
+  \begin{minipage}[t]{0.46\linewidth}
+    \vspace{1.4cm}
+    \rule{\linewidth}{0.4pt}\\[0.2em]
+    \textbf{#1}\\
+    {\small #2, UERJ\\ CERN ID: #3\\ #4}
+  \end{minipage}%
+}
+
+\begin{document}
+\frenchspacing
+\fontsize{10.5pt}{12.6pt}\selectfont
+
+\begin{center}
+\includegraphics[width=9.25cm]{iprj-letterhead}
+\end{center}
+
+\hfill Rio de Janeiro, 16 November 2026
+
+{\hyphenpenalty=10000 \textbf{Subject: Support for the application of Guilherme Inácio Gonçalves to the ATLAS Software Development Grants 2027}\par}
+
+Dear Members of the Selection Committee,
+
+As Institute Representatives of the Rio de Janeiro State University (UERJ), Brazil, we fully endorse the application of Dr. Guilherme Inácio Gonçalves to the 2027 ATLAS Software Development Grants, for Project~6, \emph{Update calorimeter clustering to support new (NN based or similar) cell energy reconstruction}.
+
+\textbf{The candidate.} Dr. Gonçalves has collaborated with ATLAS through UERJ since 2018. His work has focused on digital signal processing for calorimeter energy reconstruction: he implemented optimised digital Wiener filters in the Athena framework during a one-year stay at CERN in 2019 and 2020, presented this work at an international conference on behalf of the ATLAS Collaboration, and supported the Tile Muon Digitizer Board during LS2. He completed his ATLAS qualification task in 2024 and is an ATLAS author. In February 2026 he defended his Ph.D. in Computational Modelling at UERJ, on hybrid linear and neural-network energy estimators for the HL-LHC calorimeter readout, benchmarked against optimal filtering; this work is documented in a published TileCal Internal Note. Combined with more than eleven years of professional software engineering experience, this background matches Project~6 closely: the project propagates NN-based cell energy reconstruction into the clustering chain and compares it with optimal filtering, which is precisely the subject of his doctoral research.
+
+\textbf{Eligibility.} Dr. Gonçalves is affiliated with UERJ, and his Home Institute Declaration registered at CERN is valid until June 2029. His affiliation therefore covers the full grant period and at least one year from March 2027, as required by the call.
+
+\textbf{Engagement of the institute.} UERJ is part of the ATLAS/Brazil Cluster (UERJ, UFBA, UFJF, UFRJ and USP), which has participated in ATLAS since 1996 with contributions to TileCal, the trigger system and LAr. Within UERJ, a consolidated group of three faculty members works on calorimeter signal processing and reconstruction in ATLAS: Bernardo Sotto-Maior Peralva, Gustavo Libotte and Tiago Quirino. The group works closely with Luciano Andrade (UFJF), one of the leaders of the cluster's calorimetry activities, who co-supervised Dr.~Gonçalves's Master's research, served on his Ph.D. committee and maintains close ties with the ATLAS LAr community. Project~6 is a natural extension of this activity from cell-level energy reconstruction to clustering and electron and photon performance, and the group intends to take it up as a long-term topic.
+
+\textbf{Continuity after the grant.} After his return, Dr. Gonçalves will continue the work from UERJ, in particular the production of Run-4 simulated samples with the new cell-energy reconstruction for the e/γ studies foreseen for Summer 2028, and the maintenance and support of the clustering developments for Run~4 and beyond. UERJ hosts a graduate programme in Computational Modelling (M.Sc. and Ph.D.) and an undergraduate programme in Computer Engineering. We plan to involve students from these programmes alongside Dr. Gonçalves, so that the knowledge acquired at CERN is shared within the group and the commitment does not rely on a single person.
+
+We strongly support this application and believe it will benefit the ATLAS calorimeter software effort, the ATLAS/Brazil Cluster and the candidate's development.
+
+Sincerely,
+
+\noindent
+\signature{Marcia Begalli}{Institute Representative}{25939}{begalli@uerj.br · marcia.begalli@cern.ch}%
+\hfill
+\signature{Bernardo Sotto-Maior Peralva}{Deputy Institute Representative}{102845}{bernardo.peralva@uerj.br · bernardo@cern.ch}
+
+\end{document}
