@@ -1,7 +1,7 @@
 # ATLAS: Software Development Grants 2027 (Project 6)
 
-**Status**: `to-apply`
-**Applied**: (fill after submission)
+**Status**: `applied`
+**Applied**: 2026-11-16
 **Call**: `Software-Development-Grant-Proposals-2027.pdf` (this folder), email from Guillaume Unal, 2026-10-20
 **Project**: 6. Update calorimeter clustering to support new (NN based or similar) cell energy reconstruction
 **Contacts (project)**: Walter Lampl (Arizona), Pavol Strizenec (Kosice), Julien Maurer (Bucharest)
@@ -12,10 +12,10 @@
 
 ## Required documents
 
-- [ ] Short CV (`english/curriculum-en.pdf`)
-- [ ] Short description of experience and contributions to ATLAS and other experiments (in `cover-letter.tex`)
-- [ ] Indication of interest in projects (in `cover-letter.tex`)
-- [ ] Supporting letter from the ATLAS Institute Representative (UERJ: Marcia Begalli / Bernardo Peralva), commenting on future engagement of the institute
+- [x] Short CV (`english/curriculum-en.pdf`)
+- [x] Short description of experience and contributions to ATLAS and other experiments (in `cover-letter.tex`)
+- [x] Indication of interest in projects (in `cover-letter.tex`)
+- [x] Supporting letter from the ATLAS Institute Representative (UERJ: Marcia Begalli / Bernardo Peralva), commenting on future engagement of the institute
 
 ## Eligibility
 
@@ -27,6 +27,8 @@ Valid contract at an ATLAS institute for at least one year from March 2027. **Mu
 - 2025-12-15: not selected ("limited number of grants", no reason given).
 - 2026-10-20: 2027 call received.
 - 2026-11-15: folder created, application letter drafted.
+- 2026-11-16: UERJ support letter signed by Marcia Begalli and Bernardo Peralva (IPRJ letterhead).
+- 2026-11-16: application submitted to Martine Desnyder-Ivesdal (`submission/`, `email-martine-submission.md`). Selection expected early December 2026.
 
 ## Notas (PT)
 
